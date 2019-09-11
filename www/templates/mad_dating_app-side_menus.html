@@ -1,0 +1,52 @@
+<ion-side-menus enable-menu-with-back-views="false">
+	<ion-side-menu-content>
+		<ion-nav-bar ng-show="$root.headerExists" id="navbar-right-top" class="page-title bar-dark">
+			<ion-nav-back-button></ion-nav-back-button>
+			<ion-nav-buttons side="left">
+				<button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+			</ion-nav-buttons>
+			<ion-nav-buttons side="right">
+				<button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
+			</ion-nav-buttons>
+		</ion-nav-bar>
+		<ion-nav-view name="fabButtonUp"></ion-nav-view>
+		<ion-nav-view animation="none" name="mad_dating_app-side_menus"></ion-nav-view>
+	</ion-side-menu-content>
+	<ion-side-menu side="left">
+		<ion-header-bar class="text-center expanded dark-bg">
+			<img ng-src="{{ appLogo | trustUrl }}" class="avatar motion spin fade" />
+			<div class="menu-bottom"><span ng-bind-html="appName | strHTML"></span><br/></div>
+		</ion-header-bar>
+		<ion-content class="has-expanded-header light-bg assertive-900">
+			<ion-list class="list" >
+				<ion-item ng-hide="hide_menu_bal"  class="menu-bal item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="mad_dating_app.bal">
+					<i class="icon ion-cash"></i> {{ "Баланс" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_prem"  class="menu-prem item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="mad_dating_app.prem">
+					<i class="icon ion-fireball"></i> {{ "Премиум" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_search"  class="menu-search item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="mad_dating_app.search">
+					<i class="icon ion-earth"></i> {{ "Поиск пары" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_match"  class="menu-match item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="mad_dating_app.match">
+					<i class="icon ion-android-contacts"></i> {{ "Твои пары" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_poset"  class="menu-poset item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="mad_dating_app.poset">
+					<i class="icon ion-ios-eye"></i> {{ "Посетители" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_likes"  class="menu-likes item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="mad_dating_app.likes">
+					<i class="icon ion-ios-heart"></i> {{ "Лайки" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_liked"  class="menu-liked item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="mad_dating_app.liked">
+					<i class="icon ion-thumbsup"></i> {{ "Понравившиеся" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_disliked"  class="menu-disliked item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="mad_dating_app.disliked">
+					<i class="icon ion-thumbsdown"></i> {{ "Не понравившиеся" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_settings"  class="menu-settings item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="mad_dating_app.settings">
+					<i class="icon ion-ios-settings-strong"></i> {{ "Настройки" | translate }}
+				</ion-item>
+			</ion-list>
+		</ion-content>
+	</ion-side-menu>
+</ion-side-menus>
